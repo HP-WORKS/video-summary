@@ -1,0 +1,480 @@
+/*
+Theme Name: VideoSummary
+Theme URI: https://hp-work.net/knowledge/video-summary
+Author: hp-works
+Author URI: https://hp-work.net/
+Description: VideoSummary is a video WordPress theme designed for video/tube site or video summary blog.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: featured-images, fixed-layout, post-formats, two-columns
+Text Domain: video-summary
+Copyright: (c) 2017 hp-works
+*/
+
+@media (min-width: 1200px){
+    .container {
+        width: 970px;
+    }
+}
+
+.col-xs-3 {
+    width: 25%;
+}
+.col-xs-1.main-left{
+    width: 200px;
+}
+.col-xs-1.main-center{
+    width: 720px;
+}
+.col-xs-1.main-right{
+    width: 200px;
+}
+img {
+    max-width: 100%;
+}
+ul {
+    padding-left: 0;
+}
+ul,li {
+    list-style: none;
+}
+ul.movie-list li {
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+ul.movie-list li p {
+    padding-right:5px;
+}
+
+ul.movie-list li:hover .thumbnail {
+    box-shadow:0 0 5px #900, 0 0 5px #900, 0 0 1px #900;
+}
+ul.movie-list li .thumbnail {
+    position: relative;
+}
+
+ul.movie-list li a {
+    /*
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top :0;
+    left: 0;
+    */
+    display: block;
+    text-decoration: none;
+}
+ul.movie-list li a .black {
+    color : #666;
+}
+
+
+ul.movie-list li p {
+    font-weight: 700;
+    width: 160px ;
+    height: 40px ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color : #2793E6;
+    margin-bottom: 5px;
+}
+ul.movie-list li .category {
+    margin-bottom: 5px;
+    font-size: small;
+}
+ul.movie-list li .no-side {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+ul.movie-list li .times {
+    position: absolute;
+    bottom: 0px;
+    right : 0px;
+    background-color: rgba(0,0,0,0.9);
+    color : white;
+    padding: 2px;
+}
+ul.movie-list .images {
+    position: relative;
+}
+ul.movie-list .images img {
+    width: 100%;
+}
+.sort-by {
+    margin-top: 18px;
+}
+.movie-player iframe {
+    margin: 0px auto;
+    width: 100%;
+}
+.movie-info .image {
+    width: 100px;
+    float: left;
+    margin-right: 10px;
+}
+.movie-info .details {
+    width: 400px;
+    float: left;
+}
+.movie-info .result {
+    float: right;
+}
+.movie-info.message {
+    margin-top: 10px;
+}
+
+
+
+
+
+article footer {
+    text-align: center;
+}
+article footer ul,
+article footer li {
+    display: inline-block;
+}
+article footer li {
+    font-size: 14px;
+    line-height: 40px;
+    height: 40px;
+    background: #FFF;
+    padding: 0 20px 0 0;
+    margin: 0 5px;
+    cursor: pointer;
+}
+article footer li:before {
+    font-family: FontAwesome;
+    color: #FFF;
+    display: inline-block;
+    height: 38px;
+    padding: 0 15px;
+    margin-right: 20px;
+}
+article footer #favorite {
+    border : solid 1px #f4dca0;
+}
+article footer #favorite:hover, article footer #favorite.added {
+    border-color: #e45c00;
+}
+article footer #like {
+    border : solid 1px #FFa9c1;
+}
+article footer #like:hover, article footer #like.added {
+    border-color: #FF1981;
+}
+article footer #favorite:before {
+    content: "\f005";
+    background: #f4dca0;
+}
+
+article footer #favorite:hover:before,
+article footer #favorite.added:before {
+    background: #e45c00;
+}
+
+article footer #like:before{
+    content: "\f164";
+    background: #FFa9c1;
+}
+article footer #like:hover:before,
+article footer #like.added:before {
+    background: #FF1981;
+}
+h1 {
+    padding-left: 15px;
+    font-size : 16px;
+    color : white;
+    margin-top: 17px;
+}
+#eroterest_parts .foot {
+    display: none;
+}
+@media screen and (min-width: 761px) {
+    .images img {
+        height: 104px;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .col-xs-1.main-right {
+        width: 100%;
+    }
+    .main-right .col-xs-12 {
+        width: 25%;
+    }
+    #eroterest_parts .item {
+        float : left;
+        margin: 5px;
+    }
+
+}
+@media screen and (max-width: 1000px) {
+    .col-xs-1.main-left {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 760px) {
+    .col-xs-1.main-center {
+        width: 100%;
+    }
+    .col-xs-3,.main-right .col-xs-12 {
+        width: 33.333%;
+    }
+    ul.movie-list li p {
+        width: 100%;
+    }
+    .dp760 {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    .movie-player {
+        min-height: 300px;
+    }
+
+    iframe {
+        height: auto;
+    }
+    .movie-player > iframe {
+        min-height: 300px;
+    }
+    .container {
+        padding: 0;
+    }
+    article footer li {
+        float: left;
+        padding-right: 5px;
+    }
+    article footer li:before {
+        margin-right: 5px;
+    }
+    h2 {
+        font-size : 20px;
+    }
+    .pc {
+        display: none;
+    }
+    .breadcrumb.pull-right {
+        float: none !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .col-xs-3,.main-right .col-xs-12 {
+        width: 50%;
+    }
+    .breadcrumb.pull-right.sort-by {
+        float: none;
+    }
+}
+@media screen and (max-width: 420px) {
+    .col-xs-3,.main-right .col-xs-12 {
+        width: 50%;
+        display: block;
+    }
+
+
+    .container>.navbar-header {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .movie-info .details {
+        max-width: 100%;
+    }
+    #eroterest_parts .item {
+        float : left;
+        margin: 0px;
+    }
+    .container,.col-xs-1.main-center {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .movie-info {
+        padding: 5px;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .left-ad,.right-ad {
+        display: none;
+    }
+}
+iframe {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+.crop {
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+@media screen and (max-width: 759px) {
+    .rss {
+        display: none;
+    }
+}
+.navbar.navbar-static-bottom {
+    margin-bottom: 0;
+}
+.movie-player {
+    position: relative;
+    margin-bottom: 20px;
+}
+.movie-player .playerAd.pc {
+    position: absolute;
+    top : 120px;
+    left : 50%;
+    margin-left: -168px;
+}
+.movie-player .playerAd.sp {
+    position: absolute;
+    top : 15%;
+    left : 50%;
+    margin-left: -150px;
+}
+.pc #adClose {
+    position: absolute;
+    top : -16px;
+    right : -16px;
+    cursor: pointer;
+}
+.sp #adClose {
+    position: absolute;
+    top : -16px;
+    left : 50%;
+    margin-left: -15px;
+    cursor: pointer;
+}
+.adOut,.adTest {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top : 0;
+    left: 0;
+}
+.left-ad {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-left: -750px;
+}
+.right-ad {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-left: 550px;
+}
+.adt {
+    opacity: 0;
+}
+.ad-lex {
+    position: relative;
+    min-height: 320px;
+    max-height: 320px;
+    overflow: hidden;
+}
+.ad-row {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+.screen {
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top : 0;
+    left: 0;
+}
+@media screen and (max-width: 760px) {
+    .ad-dx {
+        width: 90%;
+        left: 5%;
+        top :30px;
+        margin-left:0;
+        margin-top:0;
+    }
+}
+#recClose {
+    position: absolute;
+    top : -15px;
+    right: -15px;
+    cursor: pointer;
+}
+
+
+.navbar.navbar-default {
+    margin-bottom: 0px;
+}
+.search-bar {
+    margin-bottom: 20px;
+    padding : 5px 0px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+.searcher {
+    width: 500px;
+}
+.keyWord {
+    width: 600px;
+}
+.keyWord a {
+    margin-right: 5px;
+}
+.search-bar .form-control {
+    padding: 5px ;
+    height: 34px;
+}
+.search-bar .btn {
+    padding: 5px 18px;
+}
+@media screen and (max-width: 1200px) {
+    .keyWord {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 640px) {
+    .searcher,.keyWord {
+        width: 100%;
+    }
+    .ad-lex {
+        min-height: 280px;
+        max-height: 280px;
+    }
+}
+h2 {
+    font-size: 22px;
+}
+.title {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.navbar-static-bottom {
+    height: 30px;
+    margin-top: 10px;
+}
+.navbar-static-bottom a {
+    color : white;
+    margin-left: 10px;
+    font-size: 16px;
+}
+.navbar-static-bottom.navbar{
+    min-height: 30px;
+}
+.btn:hover, .btn:focus, .btn.focus {
+    color: #333333;
+}
+button.simplefavorite-button {
+    background: none;
+    border: none;
+}
