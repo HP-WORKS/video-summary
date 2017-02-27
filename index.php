@@ -1,1 +1,1 @@
-<?php require_once "search.php"; ?>
+<?php get_template_part("search"); ?>

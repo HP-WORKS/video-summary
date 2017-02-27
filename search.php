@@ -5,25 +5,25 @@
 	<div class="col-xs-1 main-center">
 		<ul class="breadcrumb pull-right sort-by">
 
-			<?php if ($_GET["sort"] == 0){ ?>
+			<?php if (ero\Controller::get("sort") == 0){ ?>
 				<li class="active">▼新着順</li>
 			<?php } else { ?>
 				<li><a href="<?php echo ero\Controller::addQuery("sort", 0); ?>">新着順</a></li>
 			<?php } ?>
 
-			<?php if ($_GET["sort"] == 1){ ?>
+			<?php if (ero\Controller::get("sort") == 1){ ?>
 				<li class="active">▼お気に入り順</li>
 			<?php } else { ?>
 				<li><a href="<?php echo ero\Controller::addQuery("sort", 1); ?>">お気に入り順</a></li>
 			<?php } ?>
 
-			<?php if ($_GET["sort"] == 2){ ?>
+			<?php if (ero\Controller::get("sort") == 2){ ?>
 				<li class="active">▼いいね順</li>
 			<?php } else { ?>
 				<li><a href="<?php echo ero\Controller::addQuery("sort", 2); ?>">いいね順</a></li>
 			<?php } ?>
 
-			<?php if ($_GET["sort"] == 3){ ?>
+			<?php if (ero\Controller::get("sort") == 3){ ?>
 				<li class="active">▼再生回数順</li>
 			<?php } else { ?>
 				<li><a href="<?php echo ero\Controller::addQuery("sort", 3); ?>">再生回数順</a></li>
@@ -57,10 +57,10 @@
 		</ul>
 		<div class="bs-component">
 			<?php
-			call_user_func(function($hit, $per, $num){
-				include "pager.php";
-
-			}, $the_query->found_posts, get_option('posts_per_page'), get_query_var('page', 1));
+            set_query_var("hit", $the_query->found_posts);
+            set_query_var("per", get_option('posts_per_page'));
+            set_query_var("num", get_query_var('page', 1));
+            get_template_part("pager");
 			?>
 		</div>
 	</div>

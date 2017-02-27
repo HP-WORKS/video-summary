@@ -62,6 +62,18 @@ class Controller
 	}
 
 
+    /**
+     * リクエストパラメータ取得
+     * @param $key
+     * @param null $default
+     * @return null
+     */
+	public static function get($key, $default=null)
+    {
+        return (isset($_GET[$key])) ? $_GET[$key] : $default;
+    }
+
+
 	/**
 	 * 検索条件を判定してWP_Postの配列を取得
 	 * @return [WP_Post]
@@ -73,7 +85,7 @@ class Controller
 			'post_status'		=> 'publish',
 			'posts_per_page'	=> get_option('posts_per_page')
 		];
-		switch ($_GET["sort"])
+		switch (self::get("sort"))
 		{
 			case 1:
 				$args["orderby"]	= "meta_value_num";
@@ -98,8 +110,8 @@ class Controller
 				break;
 		}
 
-		if ($_GET["favorite"] == 1){
-			if (count($_COOKIE["favorite"]) > 0){
+		if (self::get("favorite") == 1){
+			if (isset($_COOKIE["favorite"]) && count($_COOKIE["favorite"]) > 0){
 				$args["post__in"] = $_COOKIE["favorite"];
 			}
 			else {
@@ -107,8 +119,8 @@ class Controller
 			}
 		}
 
-		if ($_GET["history"] == 1){
-			if (count($_COOKIE["preview"]) > 0){
+		if (self::get("history") == 1){
+			if (isset($_COOKIE["preview"]) && count($_COOKIE["preview"]) > 0){
 				$args["post__in"] = $_COOKIE["preview"];
 			}
 			else {
@@ -122,11 +134,11 @@ class Controller
 		if (get_query_var('tag') !== null){
 			$args["tag"] = get_query_var('tag');
 		}
-		if ($_GET["s"] !== null){
-			$args["s"] = $_GET["s"];
+		if (self::get("s") !== null){
+			$args["s"] = self::get("s");
 		}
-		if ($_GET["page"] !== null){
-			$args["paged"] = $_GET["page"];
+		if (self::get("page") !== null){
+			$args["paged"] = self::get("page");
 		}
 
 		return new \WP_Query($args);
