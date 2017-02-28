@@ -17,10 +17,10 @@
 <div class="navbar navbar-default">
 	<div class="container">
 		<div class="navbar-header">
-			<a href="<?php print home_url(); ?>" class="navbar-brand">WordPress Theme VideoSummary </a>
+			<a href="<?php print home_url(); ?>" class="navbar-brand"><?php bloginfo('name'); ?></a>
 		</div>
 		<div class="navbar-collapse collapse" id="navbar-main">
-			<h1>ワードプレスで動画まとめサイトを作ろう</h1>
+			<h1><?php bloginfo('description'); ?></h1>
 		</div>
 	</div>
 </div>
