@@ -1,5 +1,5 @@
 /*
-Theme Name: VideoSummary
+Theme Name: Video Summary
 Theme URI: https://hp-work.net/knowledge/video-summary
 Author: hp-works
 Author URI: https://hp-work.net/
@@ -7,10 +7,24 @@ Description: VideoSummary is a video WordPress theme designed for video/tube sit
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: featured-images, fixed-layout, post-formats, two-columns
+Tags: featured-images, post-formats, two-columns
 Text Domain: video-summary
 Copyright: (c) 2017 hp-works
 */
+
+.alignleft {
+    text-align: left;
+}
+.alignright {
+    text-align: right;
+}
+.aligncenter {
+    text-align: center;
+}
+.wp-caption,.wp-caption-text,.sticky,.gallery-caption,.bypostauthor,.screen-reader-texts{}
+
+
+
 
 @media (min-width: 1200px){
     .container {

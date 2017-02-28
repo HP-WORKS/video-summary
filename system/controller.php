@@ -36,21 +36,6 @@ class Controller
 	}
 
 
-
-	/**
-	 * タイトルを返す
-	 * @return string
-	 */
-	public static function title()
-	{
-		if(is_page() || is_single())
-		{
-			return wp_title('') ." ｜ ". bloginfo('name');
-		}
-		return bloginfo('name');
-	}
-
-
 	/**
 	 * WP_Postから拡張POSTクラスを生成
 	 * @param \WP_Post $post
@@ -120,7 +105,7 @@ class Controller
 		}
 
 		if (self::get("history") == 1){
-			if (isset($_COOKIE["preview"]) && count($_COOKIE["preview"]) > 0){
+			if (isset($_COOKIE["favorite"]) && count($_COOKIE["preview"]) > 0){
 				$args["post__in"] = $_COOKIE["preview"];
 			}
 			else {

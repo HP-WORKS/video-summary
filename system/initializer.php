@@ -25,6 +25,8 @@ class Initializer
 			//アイキャッチ画像サイズ設定
 			add_image_size(self::thumbnail, 200, 150, true);
 		});
+		add_theme_support('title-tag');
+        add_theme_support('automatic-feed-links');
 
 		//post解析前に
 		add_action("get_header", function()

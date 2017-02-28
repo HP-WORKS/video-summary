@@ -4,20 +4,16 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title><?php echo ero\Controller::title(); ?></title>
+	<title><?php wp_title(); ?></title>
 
 	<link rel="stylesheet" href="<?php print get_template_directory_uri(); ?>/local/css/bootstrap.cosmo.min.css">
 	<link rel="stylesheet" href="<?php print get_template_directory_uri(); ?>/style.css">
 
-	<!--[if lt IE 9]>
-	<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 	<head profile="http://gmpg.org/xfn/11">
+    <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <div class="navbar navbar-default">
 	<div class="container">
 		<div class="navbar-header">

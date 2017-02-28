@@ -7,3 +7,5 @@
  */
 require_once "system/initializer.php";
 require_once "system/controller.php";
+
+if (!isset($content_width)) $content_width = 1000;

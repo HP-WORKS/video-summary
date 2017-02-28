@@ -63,8 +63,10 @@
             get_template_part("pager");
 			?>
 		</div>
-	</div>
 
+
+
+	</div>
 
 	<?php get_sidebar(); ?>
 
